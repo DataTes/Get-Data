@@ -19,7 +19,7 @@
 
 #define ACCESSKEY "a1a24854e75fb4a6:5f10fe29734dd905"    // Replace with your Antares account access key
 #define WIFISSID "A4ple"      // Replace with your Wi-Fi SSID
-#define PASSWORD "12345678"  // Replace with your Wi-Fi password
+#define PASSWORD "112222"  // Replace with your Wi-Fi password
 
 #define projectName "data_12"  // Antares project name
 #define deviceName "data_123"   // Name of the device
@@ -35,14 +35,13 @@ void setup() {
 void loop() {
   // Get the latest data from your Antares device
   antares.get(projectName, deviceName);
+  Serial.print(123);
+  //12324
 
   // Check if we're actually getting data
   if (antares.getSuccess()) {
     int temp = antares.getInt("temperature");
     int hum = antares.getInt("humidity");
-
-    Serial.println("Temperature: " + String(temp));
-    Serial.println("Humidity: " + String(hum));
   }
   delay(5000);
 }
