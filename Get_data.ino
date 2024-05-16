@@ -37,7 +37,10 @@ void loop() {
   antares.get(projectName, deviceName);
   Serial.print(123);
   //12324
-
+  Serial.print(334);
+  Serial.print(112455);
+//asdasfasf 
+//asdfr32r
   // Check if we're actually getting data
   if (antares.getSuccess()) {
     int temp = antares.getInt("temperature");
